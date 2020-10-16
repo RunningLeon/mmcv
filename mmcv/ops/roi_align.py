@@ -18,12 +18,12 @@ class RoIAlignFunction(Function):
             'MMCVRoIAlign',
             input,
             rois,
-            aligned_height=output_size[0],
-            aligned_weight=output_size[1],
-            spatial_scale=spatial_scale,
-            sampling_ratio=sampling_ratio,
-            pool_mode=pool_mode,
-            aligned=aligned)
+            aligned_height_i=output_size[0],
+            aligned_weight_i=output_size[1],
+            spatial_scale_f=spatial_scale,
+            sampling_ratio_f=sampling_ratio,
+            pool_mode_s=pool_mode,
+            aligned_i=int(aligned))
 
     @staticmethod
     def forward(ctx,

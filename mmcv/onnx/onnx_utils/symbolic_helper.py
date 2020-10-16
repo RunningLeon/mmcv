@@ -17,6 +17,20 @@ from torch._C import ListType
 # Save some builtins as locals, because we'll shadown them below
 _sum = sum
 
+scalar_type_to_pytorch_type = [
+    torch.uint8,        # 0
+    torch.int8,         # 1
+    torch.short,        # 2
+    torch.int,          # 3
+    torch.int64,        # 4
+    torch.half,         # 5
+    torch.float,        # 6
+    torch.double,       # 7
+    torch.complex64,    # 9
+    torch.complex128,   # 10
+    torch.bool,         # 11
+]
+
 
 def _parse_arg(value, desc):
     if desc == 'none':
